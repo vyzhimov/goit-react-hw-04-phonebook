@@ -69,7 +69,7 @@ export default function App() {
       </PhoneBookSection>
 
       <ContactSection>
-        <Title>Contactss</Title>
+        <Title>Contacts</Title>
         <Filter value={filter} onChange={handleChangeFilter} />
         <ContactsList
           contacts={filteredContacts}
