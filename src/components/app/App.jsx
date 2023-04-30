@@ -43,11 +43,13 @@ export default function App() {
       return;
     }
 
-    setContacts([...contacts, contact]);
+    setContacts(prev => [...prev, contact]);
   };
 
   const onDeleteContact = id => {
-    setContacts(contacts.filter(contact => contact.id !== id));
+    setContacts(prevContacts =>
+      prevContacts.filter(contact => contact.id !== id)
+    );
   };
 
   const handleChangeFilter = event => {
